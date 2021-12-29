@@ -1,5 +1,6 @@
 package com.examples.entity;
 
+import com.examples.service.FileService;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.Type;
@@ -7,6 +8,7 @@ import org.hibernate.annotations.Type;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -29,10 +31,13 @@ public class Video {
     @Size(max = 300)
     @NotBlank
     private String description;
-    @NotBlank
-    private String location;
     @OneToMany(mappedBy = "video", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Comment> comments;
+    @NotBlank
+    private String videofilename;
+    private String imagefilename;
+    private String fullvideofilename = String.format("%s_%s", LocalDateTime.now().getNano(), videofilename);
+    private String fullimagefilename = String.format("%s_%s", LocalDateTime.now().getNano(), imagefilename);
 
     public void addComment (Comment comment) {
         if(comments == null) {
@@ -40,4 +45,5 @@ public class Video {
         }
         comments.add(comment);
     }
+
 }

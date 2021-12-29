@@ -1,13 +1,12 @@
-INSERT INTO videos (id, name, category, description, location) VALUES
-('a5685360-e619-4b54-a26a-a1ec4ca53e45', 'Name1', 'Fire', 'First fire performance', 'C:\Users\cerni\IdeaProjects\ArturoBaigiamasisDarbas\Video Resources\video1.mp4'),
-('15a95af7-8b83-4a08-8001-0f865db8ea27', 'Name2', 'Fire', 'Second fire performance', 'C:\Users\cerni\IdeaProjects\ArturoBaigiamasisDarbas\Video Resources\video2.mp4'),
-('ebdee4f9-5763-4afc-85ed-98b2fdefb35f', 'Name3', 'Fire', 'Third fire performance', 'C:\Users\cerni\IdeaProjects\ArturoBaigiamasisDarbas\Video Resources\video3.mp4'),
-('ebdee4f9-5763-4afc-85ed-98b2fdefb35a', 'Name4', 'Fire', 'Fourth fire performance', 'C:\Users\cerni\IdeaProjects\ArturoBaigiamasisDarbas\Video Resources\video4.mp4');
+INSERT INTO videos (id, name, category, description, fullvideofilename, fullimagefilename) VALUES
+('a5685360-e619-4b54-a26a-a1ec4ca53e45', 'Name1', 'Fire', 'First fire performance', '45188800_video1.mp4', '999851700_1806954.jpg'),
+('15a95af7-8b83-4a08-8001-0f865db8ea27', 'Name2', 'Fire', 'Second fire performance', '519287100_video2.mp4', '999851700_1806954.jpg'),
+('ebdee4f9-5763-4afc-85ed-98b2fdefb35f', 'Name3', 'Fire', 'Third fire performance', '300539500_video3.mp4', '999851700_1806954.jpg');
 
 
-INSERT INTO users(id, username, password) VALUES
-('c2aa5f20-2441-40f8-8cce-d31dbd17bc84', 'user',  '{bcrypt}$2a$10$amFqbdk0pe7wqp9ufEcHOu9t48Sp9NptByAqW0Ak5dTV9JHp/dapm'), /*pass->user*/
-('bd8968db-ad2a-4dd0-a0ab-7eebcc05427e', 'admin', '{bcrypt}$2a$10$/kcDI78qGnRwg0R1ullGCerGpKuH1/7kxYHIYTrPa8GkLnlIZBW0K'); /*pass->admin*/
+INSERT INTO users(id, username, name, surname, password) VALUES
+('c2aa5f20-2441-40f8-8cce-d31dbd17bc84', 'user', 'Useris', 'Useriauskas',  '{bcrypt}$2a$10$amFqbdk0pe7wqp9ufEcHOu9t48Sp9NptByAqW0Ak5dTV9JHp/dapm'), /*pass->user*/
+('bd8968db-ad2a-4dd0-a0ab-7eebcc05427e', 'admin', 'Adminas', 'Adminauskas', '{bcrypt}$2a$10$/kcDI78qGnRwg0R1ullGCerGpKuH1/7kxYHIYTrPa8GkLnlIZBW0K'); /*pass->admin*/
 
 
 INSERT INTO roles(id, name) VALUES
